@@ -46,9 +46,9 @@ export PKG_CONFIG_PATH=/usr/lib/pkgconfig
 
 # Install transmission
 cd /usr/local/src
-wget http://download-origin.transmissionbt.com/files/transmission-2.83.tar.xz
-tar xvf transmission-2.83.tar.xz
-cd transmission-2.83
+wget https://transmission.cachefly.net/transmission-2.84.tar.xz
+tar xvf transmission-2.84.tar.xz
+cd transmission-2.84
 ./configure --prefix=/usr
 make
 make install
