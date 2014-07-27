@@ -55,7 +55,7 @@ make install
 
 # Set up init script for transmission-daemon
 cd /etc/init.d
-wget -O transmissiond http://pastie.org/pastes/962731/download
+wget -O transmissiond https://gist.githubusercontent.com/elijahpaul/b98f39011bce48c0750d/raw/0812b6d949b01922f7060f4d4d15dc5e70c5d5a5/transmission-daemon
 sed -i "s%TRANSMISSION_HOME=/home/transmission%TRANSMISSION_HOME=/home/$uname%" transmissiond
 sed -i 's%DAEMON_USER="transmission"%DAEMON_USER="placeholder123"%' transmissiond
 sed -i "s%placeholder123%$uname%" transmissiond
