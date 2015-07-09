@@ -31,9 +31,9 @@ csf -r
 
 # Install libevent
 cd /usr/local/src
-wget http://sunet.dl.sourceforge.net/project/levent/libevent/libevent-2.0/libevent-2.0.21-stable.tar.gz
-tar xzf libevent-2.0.21-stable.tar.gz 
-cd libevent-2.0.21-stable
+wget https://github.com/libevent/libevent/releases/download/release-2.0.22-stable/libevent-2.0.22-stable.tar.gz
+tar xzf libevent-2.0.22-stable.tar.gz
+cd libevent-2.0.22-stable
 ./configure --prefix=/usr
 make
 make install
@@ -59,7 +59,7 @@ wget -O transmissiond https://gist.githubusercontent.com/elijahpaul/b98f39011bce
 sed -i "s%TRANSMISSION_HOME=/home/transmission%TRANSMISSION_HOME=/home/$uname%" transmissiond
 sed -i 's%DAEMON_USER="transmission"%DAEMON_USER="placeholder123"%' transmissiond
 sed -i "s%placeholder123%$uname%" transmissiond
-chmod 755 /etc/init.d/transmissiond 
+chmod 755 /etc/init.d/transmissiond
 chkconfig --add transmissiond
 chkconfig --level 345 transmissiond on
 
